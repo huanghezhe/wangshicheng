@@ -1,0 +1,480 @@
+body {
+    display: block !important;
+    background: #111111;
+}
+.container {
+    position: relative;
+    /*overflow: hidden;*/
+}
+.layout {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+}
+.layout_bg {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.layout_bg_vague {
+    -webkit-filter: blur(10px);
+    filter: blur(10px);
+}
+.main_vague{
+    -webkit-filter: blur(20px);
+    filter: blur(20px);
+}
+.layout_online {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    /*top: calc(50% - 2.5rem);*/
+    /*left: calc(50% - 2.5rem);*/
+    /*right: calc(50% - 2.5rem);*/
+    top: 0;
+    left: 0;
+    z-index: 9;
+}
+.layout_online_circular {
+    width: 5rem;
+    height: 5rem;
+    border: solid #fff 0.06rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.layout_online_circular_image {
+    width: 0.69rem;
+    height: 0.76rem;
+}
+.layout_online_close {
+    width: 0.14rem;
+    height: 0.14rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    top: 0.61rem;
+    right: 0.59rem;
+}
+.layout_online_close_image {
+    width: 0.14rem;
+    height: 0.14rem;
+}
+.layout_online_hide {
+    display: none;
+}
+
+
+/* 左边列表 */
+.culture_left {
+    display: flex;
+    min-height: 8rem
+}
+.culture_left_nav {
+    width: 2.19rem;
+    height: 100%;
+    background: linear-gradient(to left, rgba(17, 17, 17, 0) 0%, rgba(17, 17, 17, 0.49) 12.69%, rgba(17, 17, 17, 0.89) 35.79%, #111 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding-left: 0.53rem;
+}
+.culture_left .culture_left_nav .st_logo {
+    width: 1.15rem;
+    height: 0.34rem;
+    display: flex;
+    margin-top: 0.52rem;
+    cursor: pointer;
+}
+.st_logo_img {
+    width: 100%;
+    height: 100%;
+}
+.culture_left .culture_left_nav .culture_left_title {
+    font-family: "HYYakuHei-HEW";
+    font-weight: normal;
+    font-size: 0.21rem;
+    line-height: 0.25rem;
+    text-align: left;
+    color: #cecece;
+    margin: 0.53rem 0 0.65rem;
+}
+.culture_left_list {
+    font-family: "HYYakuHei-FEW";
+    font-weight: normal;
+    font-size: 0.18rem;
+    line-height: 0.22rem;
+    text-align: left;
+    color: #595959;
+    margin-top: 0.2rem;
+    cursor: pointer;
+    height: 0.22rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+}
+.culture_left_list_active {
+    color: #cecece;
+}
+
+/* 详情介绍信息 */
+.culture_left_info {
+    width: 3.81rem;
+    padding: 0 0.61rem 0 0.48rem;
+    background: rgba(0, 0, 0, 0.8);
+    font-family: "HYYakuHei-HEW";
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.culture_left_info_hide {
+    display: none;
+}
+.culture_left_info_title {
+    display: flex;
+    align-items: center;
+    margin: 0rem 0 0.92rem;
+}
+.culture_left_info_title .culture_left_info_title_icon {
+    width: 0.52rem;
+    height: 0.52rem;
+}
+.culture_left_info_title .culture_left_info_title_text {
+    width: 2rem;
+    font-weight: normal;
+    font-size: 0.24rem;
+    line-height: 0.29rem;
+    text-align: left;
+    color: #cecece;
+    padding-left: 0.15rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+}
+.culture_left_info .culture_left_info_introduce {
+    width: 2.72rem;
+    font-weight: normal;
+    font-size: 0.17rem;
+    line-height: 0.2rem;
+    text-align: left;
+    color: #595959;
+}
+.culture_left_info .culture_left_info_introduce .culture_left_info_introduce_title {
+    color: #cecece;
+    margin-bottom: 0.16rem;
+}
+.culture_left_info_introduce_content {
+    height: 6rem;
+    font-family: "HYYakuHei-DEW";
+    font-weight: normal;
+    font-size: 0.17rem;
+    line-height: 0.28rem;
+    text-align: left;
+    color: #cecece;
+    word-break: break-all;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+.culture_left_info_introduce_content::-webkit-scrollbar {
+    display: none;
+}
+.culture_left_info .culture_left_info_detail {
+    width: 1.25rem;
+    height: 0.62rem;
+    font-weight: normal;
+    font-size: 0.17rem;
+    line-height: 0.62rem;
+    text-align: center;
+    color: #cecece;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.culture_detail_to_icon {
+    width: 100%;
+    height: 100%;
+}
+.culture_left_info_detail_hide {
+    display: none !important;
+}
+
+.culture_left_info .culture_left_info_detail .culture_left_info_detail_botton {
+    background: #fff;
+    border: solid 0.1rem #000;
+    border-left: solid 0.12rem #fff;
+    display: inline-block;
+    margin-left: 0.08rem;
+}
+.culture_left_info_detail_logo_type {
+    width: 1.25rem;
+    height: 0.62rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.33rem;
+}
+.culture_left_info_detail_logo_type_image {
+    width: 100%;
+    cursor: pointer;
+}
+.culture_left_info_detail_logo_type_hide {
+    display: none;
+}
+.culture_left_info_detail_logo_type_on_line {
+    font-family: "HYYakuHei-HEW";
+    font-weight: normal;
+    font-size: 0.17rem;
+    line-height: 0.2rem;
+    text-align: left;
+    color: #cecece;
+}
+
+
+/* 轮播 */
+.culture_swiper {
+    height: 100%;
+    min-height: 8rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: -15rem;
+}
+
+.culture_swiper_hide {
+    /* display: none; */
+    opacity: 0;
+}
+
+.swiper-container {
+    width: 9.27rem;
+    height: 5.24rem;
+    border: solid #fff 1px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 0.36rem;
+    border: none;
+    box-shadow: 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.5);
+}
+.swiper-container-enlarge {
+    width: 14.85rem;
+    height: 8.39rem;
+}
+.swiper-slide {
+    /*width: 100% !important;*/
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+.swiper-slide .swiper-slide-video {
+    /*width: 100% !important;*/
+    height: 100%;
+}
+/* 暂停按钮 */
+.swiper-slide .culture-video {
+    width: 1.18rem;
+    height: 1.18rem;
+    border-radius: 50%;
+    border: 0.08rem solid #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: calc(50% - 0.59rem);
+    left: calc(50% - 0.59rem);
+    z-index: 9;
+    cursor: pointer;
+}
+.swiper-slide .culture-video .culture-video-triangle {
+    width: 0.48rem;
+    height: 0.54rem;
+}
+
+.culture_swiper .swiper-container .culture-st-prev {
+    width: 0.4rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 0.21rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 9;
+}
+.culture_swiper .swiper-container .culture-st-next {
+    width: 0.4rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-right: 0.21rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 9;
+}
+.culture_swiper .swiper-container .swiper-st-button-icon {
+    width: 0.4rem;
+    height: 0.4rem;
+}
+.culture_swiper .swiper-container .swiper-st-button-close {
+    width: 0.14rem;
+    height: 0.14rem;
+    position: absolute;
+    top: 0.23rem;
+    right: 0.02rem;
+    z-index: 10;
+    cursor: pointer;
+}
+.culture_swiper .swiper-container .swiper-st-button-enlarge {
+    width: 0.24rem;
+    height: 0.24rem;
+    position: absolute;
+    bottom: 0.23rem;
+    right: 0.02rem;
+    z-index: 10;
+    cursor: pointer;
+}
+.culture_swiper .swiper-container .swiper-st-button-narrow {
+     width: 0.24rem;
+     height: 0.24rem;
+     position: absolute;
+     bottom: 0.23rem;
+     right: 0.02rem;
+     z-index: 10;
+ }
+ .swiper-st-button-icon-hide {
+     display: none;
+ }
+.swiper-slide .culture-video-hide {
+    display: none;
+}
+
+
+/* 右侧 */
+.culture_rigth {
+    width: 1.61rem;
+    height: 100%;
+    background: linear-gradient(to right, rgba(17, 17, 17, 0) 0%, rgba(17, 17, 17, 0.49) 12.69%, rgba(17, 17, 17, 0.89) 35.79%, #111 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-right: 0.56rem;
+    overflow: hidden;
+}
+.rigth_outter {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.rigth_icon {
+    font-weight: normal;
+    font-size: 0.16rem;
+    line-height: 0.19rem;
+    text-align: right;
+    color: #cecece;
+    margin-top: 0.52rem;
+}
+.rigth_icon .rigth_icon_search {
+    width: 0.13rem;
+    height: 0.13rem;
+    margin-right: 0.14rem;
+    cursor: pointer;
+}
+.rigth_icon .rigth_icon_caidan {
+    width: 0.19rem;
+    height: 0.15rem;
+    cursor: pointer;
+}
+.rigth_icon .rigth_icon_close {
+    width: 0.14rem;
+    height: 0.14rem;
+    cursor: pointer;
+}
+.rigth_goback {
+    font-weight: normal;
+    font-size: 0.16rem;
+    line-height: 0.19rem;
+    text-align: right;
+    color: #cecece;
+    margin: 0.59rem 0 0.69rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-family: 'HYYakuHei-FEW';
+}
+.rigth_goback_icon {
+    width: 0.17rem;
+    height: 0.17rem;
+    margin-left: 0.13rem;
+}
+.rigth_nav {
+    position: relative;
+
+}
+.rigth_nav_list {
+    font-weight: normal;
+    font-size: 0.16rem;
+    line-height: 0.19rem;
+    text-align: right;
+    color: #595959;
+    margin-top: 0.16rem;
+    cursor: pointer;
+    font-family: 'HYYakuHei-FEW';
+}
+.rigth_list_active {
+    color: #cecece;
+}
+.rigth_icon_hide {
+    display: none;
+}
+.rigth_nav_hide {
+    margin-right: -2rem;
+}
+.rigth_nav_none {
+    display: none;
+}
+.rigth_animation_show {
+    animation: rigthAnimationShow 1s;
+}
+.rigth_animation_hide {
+    animation: rigthAnimationHide 1s;
+}
+@keyframes rigthAnimationShow
+{
+    from {
+        margin-right: -2rem;
+    }
+    to {
+        margin-right: 0;
+    }
+}
+@keyframes rigthAnimationHide
+{
+    from {
+        margin-right: 0;
+    }
+    to {
+        margin-right: -2rem;
+    }
+}
